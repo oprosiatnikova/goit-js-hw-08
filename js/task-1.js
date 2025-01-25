@@ -67,7 +67,6 @@ const galleryContainer = document.querySelector('.gallery');
 const modal = document.querySelector('.modal');
 const modalImage = document.querySelector('.modal-image');
 
-// Генерація галереї
 const galleryMarkup = images
   .map(
     ({ preview, original, description }) => `
@@ -87,7 +86,6 @@ const galleryMarkup = images
 
 galleryContainer.innerHTML = galleryMarkup;
 
-// Обробка кліків
 galleryContainer.addEventListener('click', (event) => {
   event.preventDefault();
   const target = event.target;
@@ -99,7 +97,6 @@ galleryContainer.addEventListener('click', (event) => {
   modal.classList.add('open');
 });
 
-// Закриття модального вікна
 modal.addEventListener('click', () => {
   modal.classList.remove('open');
   modalImage.src = '';
