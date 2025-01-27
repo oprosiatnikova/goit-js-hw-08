@@ -102,3 +102,13 @@ modal.addEventListener('click', () => {
   modalImage.src = '';
   modalImage.alt = '';
 });
+
+// Використовуємо бібліотеку BasicLightbox для створення модального вікна
+  const instance = basicLightbox.create(`
+    <img src="${largeImageURL}" alt="${event.target.alt}" />
+  `);
+
+instance.show();
+    
+
+
